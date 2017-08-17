@@ -325,3 +325,130 @@ tar: Exiting with failure status due to previous errors
   INFO [f374f3d0] Running cd /usr/share/nginx/html/repo && git clean -d -x -f && git reset --hard as wimops@127.0.0.1
  DEBUG [f374f3d0] Command: cd /usr/share/nginx/html/repo && git clean -d -x -f && git reset --hard
  DEBUG [f374f3d0] 	fatal: This operation must be run in a work tree
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-17 13:03:33 -0700 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b719401b] Running /usr/bin/env mkdir -p /tmp as wimops@127.0.0.1
+ DEBUG [b719401b] Command: /usr/bin/env mkdir -p /tmp
+  INFO [b719401b] Finished in 0.231 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-chappress-staging-spence.sh 0.0%
+  INFO Uploading /tmp/git-ssh-chappress-staging-spence.sh 100.0%
+  INFO [d8fbd6da] Running /usr/bin/env chmod 700 /tmp/git-ssh-chappress-staging-spence.sh as wimops@127.0.0.1
+ DEBUG [d8fbd6da] Command: /usr/bin/env chmod 700 /tmp/git-ssh-chappress-staging-spence.sh
+  INFO [d8fbd6da] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [b07f5947] Running /usr/bin/env git ls-remote git@github.com:spence-man/capBasic.git HEAD as wimops@127.0.0.1
+ DEBUG [b07f5947] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env git ls-remote git@github.com:spence-man/capBasic.git HEAD )
+ DEBUG [b07f5947] 	8091d949a776a8d16ff07e91d5793fc0ad5a8290	HEAD
+  INFO [b07f5947] Finished in 0.777 seconds with exit status 0 (successful).
+  INFO [1b39b910] Running /usr/bin/env mkdir -p /usr/share/nginx/html/shared /usr/share/nginx/html/releases as wimops@127.0.0.1
+ DEBUG [1b39b910] Command: /usr/bin/env mkdir -p /usr/share/nginx/html/shared /usr/share/nginx/html/releases
+  INFO [1b39b910] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [8b06c924] Running /usr/bin/env mkdir -p /usr/share/nginx/html/shared/content/uploads as wimops@127.0.0.1
+ DEBUG [8b06c924] Command: /usr/bin/env mkdir -p /usr/share/nginx/html/shared/content/uploads
+  INFO [8b06c924] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [c79054bf] Running /usr/bin/env mkdir -p /usr/share/nginx/html/shared as wimops@127.0.0.1
+ DEBUG [c79054bf] Command: /usr/bin/env mkdir -p /usr/share/nginx/html/shared
+  INFO [c79054bf] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [8b5bb659] Running /usr/bin/env touch /usr/share/nginx/html/shared/wp-config.php as wimops@127.0.0.1
+ DEBUG [8b5bb659] Command: /usr/bin/env touch /usr/share/nginx/html/shared/wp-config.php
+  INFO [8b5bb659] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [a80806c9] Running [ -f /usr/share/nginx/html/shared/wp-config.php ] as wimops@127.0.0.1
+ DEBUG [a80806c9] Command: [ -f /usr/share/nginx/html/shared/wp-config.php ]
+ DEBUG [a80806c9] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [e1388087] Running [ -f /usr/share/nginx/html/current/REVISION ] as wimops@127.0.0.1
+ DEBUG [e1388087] Command: [ -f /usr/share/nginx/html/current/REVISION ]
+ DEBUG [e1388087] Finished in 0.012 seconds with exit status 1 (failed).
+ DEBUG [ae7e7a89] Running cd /usr/share/nginx/html/repo as wimops@127.0.0.1
+ DEBUG [ae7e7a89] Command: cd /usr/share/nginx/html/repo
+ DEBUG [ae7e7a89] 	bash: line 0: cd: /usr/share/nginx/html/repo: No such file or directory
+ DEBUG [ae7e7a89] Finished in 0.013 seconds with exit status 1 (failed).
+  INFO Skipping check for changed files since the repository path does not exist.
+ DEBUG [44902b71] Running [ -f /usr/share/nginx/html/repo/HEAD ] as wimops@127.0.0.1
+ DEBUG [44902b71] Command: [ -f /usr/share/nginx/html/repo/HEAD ]
+ DEBUG [44902b71] Finished in 0.013 seconds with exit status 1 (failed).
+ DEBUG [5dec66bc] Running if test ! -d /usr/share/nginx/html; then echo "Directory does not exist '/usr/share/nginx/html'" 1>&2; false; fi as wimops@127.0.0.1
+ DEBUG [5dec66bc] Command: if test ! -d /usr/share/nginx/html; then echo "Directory does not exist '/usr/share/nginx/html'" 1>&2; false; fi
+ DEBUG [5dec66bc] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [e2b3d637] Running /usr/bin/env git clone --mirror git@github.com:spence-man/capBasic.git /usr/share/nginx/html/repo as wimops@127.0.0.1
+ DEBUG [e2b3d637] Command: cd /usr/share/nginx/html && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env git clone --mirror git@github.com:spence-man/capBasic.git /usr/share/nginx/html/repo )
+ DEBUG [e2b3d637] 	Cloning into bare repository '/usr/share/nginx/html/repo'...
+ DEBUG [e2b3d637] 	remote: Counting objects: 17, done.[K
+ DEBUG [e2b3d637] 	remote: Compressing objects:   7% (1/14)   [Kremote: Compressing objects:  14% (2/14)   [Kremote: Compressing objects:  21% (3/14)   [Kremote: Compressing objects:  28% (4/14)   [Kremote: Compressing objects:  35% (5/14)   [Kremote: Compressing objects:  42% (6/14)   [Kremote: Compressing objects:  50% (7/14)   [Kremote: Compressing objects:  57% (8/14)   [Kremote: Compressing objects:  64% (9/14)   [Kremote: Compressing objects:  71% (10/14)   [Kremote: Compressing objects:  78% (11/14)   [Kremote: Compressing objects:  85% (12/14)   [Kremote: Compressing objects:  92% (13/14)   [Kremote: Compressing objects: 100% (14/14)   [Kremote: Compressing objects: 100% (14/14), done.[K
+ DEBUG [e2b3d637] 	Receiving objects:   5% (1/17)   Receiving objects:  11% (2/17)   Receiving objects:  17% (3/17)   Receiving objects:  23% (4/17)   Receiving objects:  29% (5/17)   Receiving objects:  35% (6/17)   Receiving objects:  41% (7/17)   Receiving objects:  47% (8/17)   Receiving objects:  52% (9/17)   Receiving objects:  58% (10/17)   Receiving objects:  64% (11/17)   Receiving objects:  70% (12/17)   Receiving objects:  76% (13/17)   Receiving objects:  82% (14/17)   Receiving objects:  88% (15/17)   Receiving objects:  94% (16/17)   Receiving objects: 100% (17/17)   Receiving objects: 100% (17/17), 9.66 KiB | 0 bytes/s, done.
+ DEBUG [e2b3d637] 	remote: Total 17 (delta 0), reused 17 (delta 0), pack-reused 0[K
+  INFO [e2b3d637] Finished in 0.760 seconds with exit status 0 (successful).
+ DEBUG [09eed77d] Running if test ! -d /usr/share/nginx/html/repo; then echo "Directory does not exist '/usr/share/nginx/html/repo'" 1>&2; false; fi as wimops@127.0.0.1
+ DEBUG [09eed77d] Command: if test ! -d /usr/share/nginx/html/repo; then echo "Directory does not exist '/usr/share/nginx/html/repo'" 1>&2; false; fi
+ DEBUG [09eed77d] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [4399e9ac] Running /usr/bin/env git remote set-url origin git@github.com:spence-man/capBasic.git as wimops@127.0.0.1
+ DEBUG [4399e9ac] Command: cd /usr/share/nginx/html/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env git remote set-url origin git@github.com:spence-man/capBasic.git )
+  INFO [4399e9ac] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [21050791] Running /usr/bin/env git remote update --prune as wimops@127.0.0.1
+ DEBUG [21050791] Command: cd /usr/share/nginx/html/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [21050791] 	Fetching origin
+  INFO [21050791] Finished in 0.706 seconds with exit status 0 (successful).
+ DEBUG [f7dd37bb] Running if test ! -d /usr/share/nginx/html/repo; then echo "Directory does not exist '/usr/share/nginx/html/repo'" 1>&2; false; fi as wimops@127.0.0.1
+ DEBUG [f7dd37bb] Command: if test ! -d /usr/share/nginx/html/repo; then echo "Directory does not exist '/usr/share/nginx/html/repo'" 1>&2; false; fi
+ DEBUG [f7dd37bb] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [47156d2d] Running /usr/bin/env mkdir -p /usr/share/nginx/html/releases/20170817200334 as wimops@127.0.0.1
+ DEBUG [47156d2d] Command: cd /usr/share/nginx/html/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env mkdir -p /usr/share/nginx/html/releases/20170817200334 )
+  INFO [47156d2d] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [ab4fa02c] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /usr/share/nginx/html/releases/20170817200334 as wimops@127.0.0.1
+ DEBUG [ab4fa02c] Command: cd /usr/share/nginx/html/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /usr/share/nginx/html/releases/20170817200334 )
+  INFO [ab4fa02c] Finished in 0.018 seconds with exit status 0 (successful).
+ DEBUG [93990cfc] Running if test ! -d /usr/share/nginx/html/repo; then echo "Directory does not exist '/usr/share/nginx/html/repo'" 1>&2; false; fi as wimops@127.0.0.1
+ DEBUG [93990cfc] Command: if test ! -d /usr/share/nginx/html/repo; then echo "Directory does not exist '/usr/share/nginx/html/repo'" 1>&2; false; fi
+ DEBUG [93990cfc] Finished in 0.012 seconds with exit status 0 (successful).
+ DEBUG [c9bae70b] Running /usr/bin/env git rev-list --max-count=1 master as wimops@127.0.0.1
+ DEBUG [c9bae70b] Command: cd /usr/share/nginx/html/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [c9bae70b] 	8091d949a776a8d16ff07e91d5793fc0ad5a8290
+ DEBUG [c9bae70b] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [7be2bff4] Running if test ! -d /usr/share/nginx/html/releases/20170817200334; then echo "Directory does not exist '/usr/share/nginx/html/releases/20170817200334'" 1>&2; false; fi as wimops@127.0.0.1
+ DEBUG [7be2bff4] Command: if test ! -d /usr/share/nginx/html/releases/20170817200334; then echo "Directory does not exist '/usr/share/nginx/html/releases/20170817200334'" 1>&2; false; fi
+ DEBUG [7be2bff4] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [62e9b930] Running /usr/bin/env echo "8091d949a776a8d16ff07e91d5793fc0ad5a8290" >> REVISION as wimops@127.0.0.1
+ DEBUG [62e9b930] Command: cd /usr/share/nginx/html/releases/20170817200334 && /usr/bin/env echo "8091d949a776a8d16ff07e91d5793fc0ad5a8290" >> REVISION
+  INFO [62e9b930] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [6b00ac1f] Running /usr/bin/env mkdir -p /usr/share/nginx/html/releases/20170817200334 as wimops@127.0.0.1
+ DEBUG [6b00ac1f] Command: /usr/bin/env mkdir -p /usr/share/nginx/html/releases/20170817200334
+  INFO [6b00ac1f] Finished in 0.016 seconds with exit status 0 (successful).
+ DEBUG [dec8c9c2] Running [ -L /usr/share/nginx/html/releases/20170817200334/wp-config.php ] as wimops@127.0.0.1
+ DEBUG [dec8c9c2] Command: [ -L /usr/share/nginx/html/releases/20170817200334/wp-config.php ]
+ DEBUG [dec8c9c2] Finished in 0.013 seconds with exit status 1 (failed).
+ DEBUG [1fe542c0] Running [ -f /usr/share/nginx/html/releases/20170817200334/wp-config.php ] as wimops@127.0.0.1
+ DEBUG [1fe542c0] Command: [ -f /usr/share/nginx/html/releases/20170817200334/wp-config.php ]
+ DEBUG [1fe542c0] Finished in 0.014 seconds with exit status 1 (failed).
+  INFO [a1bac624] Running /usr/bin/env ln -s /usr/share/nginx/html/shared/wp-config.php /usr/share/nginx/html/releases/20170817200334/wp-config.php as wimops@127.0.0.1
+ DEBUG [a1bac624] Command: /usr/bin/env ln -s /usr/share/nginx/html/shared/wp-config.php /usr/share/nginx/html/releases/20170817200334/wp-config.php
+  INFO [a1bac624] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [f148b194] Running /usr/bin/env mkdir -p /usr/share/nginx/html/releases/20170817200334/content as wimops@127.0.0.1
+ DEBUG [f148b194] Command: /usr/bin/env mkdir -p /usr/share/nginx/html/releases/20170817200334/content
+  INFO [f148b194] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [f9100ea1] Running [ -L /usr/share/nginx/html/releases/20170817200334/content/uploads ] as wimops@127.0.0.1
+ DEBUG [f9100ea1] Command: [ -L /usr/share/nginx/html/releases/20170817200334/content/uploads ]
+ DEBUG [f9100ea1] Finished in 0.014 seconds with exit status 1 (failed).
+ DEBUG [8b35889f] Running [ -d /usr/share/nginx/html/releases/20170817200334/content/uploads ] as wimops@127.0.0.1
+ DEBUG [8b35889f] Command: [ -d /usr/share/nginx/html/releases/20170817200334/content/uploads ]
+ DEBUG [8b35889f] Finished in 0.012 seconds with exit status 1 (failed).
+  INFO [93566453] Running /usr/bin/env ln -s /usr/share/nginx/html/shared/content/uploads /usr/share/nginx/html/releases/20170817200334/content/uploads as wimops@127.0.0.1
+ DEBUG [93566453] Command: /usr/bin/env ln -s /usr/share/nginx/html/shared/content/uploads /usr/share/nginx/html/releases/20170817200334/content/uploads
+  INFO [93566453] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [33c0997f] Running /usr/bin/env ln -s /usr/share/nginx/html/releases/20170817200334 /usr/share/nginx/html/releases/current as wimops@127.0.0.1
+ DEBUG [33c0997f] Command: /usr/bin/env ln -s /usr/share/nginx/html/releases/20170817200334 /usr/share/nginx/html/releases/current
+  INFO [33c0997f] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [0b0eb0f6] Running /usr/bin/env mv /usr/share/nginx/html/releases/current /usr/share/nginx/html as wimops@127.0.0.1
+ DEBUG [0b0eb0f6] Command: /usr/bin/env mv /usr/share/nginx/html/releases/current /usr/share/nginx/html
+  INFO [0b0eb0f6] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [6a9e5615] Running /usr/bin/env ls -x /usr/share/nginx/html/releases as wimops@127.0.0.1
+ DEBUG [6a9e5615] Command: /usr/bin/env ls -x /usr/share/nginx/html/releases
+ DEBUG [6a9e5615] 	20170817200334
+ DEBUG [6a9e5615] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [b51db411] Running if test ! -d /usr/share/nginx/html/releases; then echo "Directory does not exist '/usr/share/nginx/html/releases'" 1>&2; false; fi as wimops@127.0.0.1
+ DEBUG [b51db411] Command: if test ! -d /usr/share/nginx/html/releases; then echo "Directory does not exist '/usr/share/nginx/html/releases'" 1>&2; false; fi
+ DEBUG [b51db411] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [b610c606] Running /usr/bin/env echo "Branch master (at 8091d949a776a8d16ff07e91d5793fc0ad5a8290) deployed as release 20170817200334 by spence" >> /usr/share/nginx/html/revisions.log as wimops@127.0.0.1
+ DEBUG [b610c606] Command: cd /usr/share/nginx/html/releases && /usr/bin/env echo "Branch master (at 8091d949a776a8d16ff07e91d5793fc0ad5a8290) deployed as release 20170817200334 by spence" >> /usr/share/nginx/html/revisions.log
+  INFO [b610c606] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [e0648e51] Running /usr/bin/env chmod 644 /usr/share/nginx/html/releases/20170817200334/public/wp-config.php as wimops@127.0.0.1
+ DEBUG [e0648e51] Command: /usr/bin/env chmod 644 /usr/share/nginx/html/releases/20170817200334/public/wp-config.php
+ DEBUG [e0648e51] 	chmod: cannot access ‘/usr/share/nginx/html/releases/20170817200334/public/wp-config.php’: No such file or directory

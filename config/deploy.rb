@@ -12,7 +12,7 @@ set :local_domain, 'localhost:9999'
 ############################################
 
 set :application, "chappress"
-set :repo_url, "git@github.com:spence-man/blogsCapMix.git"
+set :repo_url, "git@github.com:spence-man/capBasic.git"
 
 set :git_strategy, SubmoduleStrategy
 
