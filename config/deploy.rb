@@ -21,7 +21,7 @@ set :git_strategy, SubmoduleStrategy
 ############################################
 
 set :log_level, :debug
-set :use_sudo, true
+set :use_sudo, false
 set :pty, true
 
 set :ssh_options, {
@@ -60,10 +60,18 @@ namespace :deploy do
   desc "Restart services"
   task :restart_services do
     on roles(:app) do
-      sudo :service, :nginx, :restart
-      sudo :service, :'php-fpm' , :restart
+      execute "sudo systemctl restart php-fpm"
+      execute "sudo systemctl restart nginx"
     end
   end
+
+  # desc "Restart services"
+  # task :restart_services do
+  #   on roles(:app) do
+  #     sudo :service, :nginx, :restart
+  #     sudo :service, :'php-fpm' , :restart
+  #   end
+  # end
 
   desc "Wp Core Install"
   task :core_install do

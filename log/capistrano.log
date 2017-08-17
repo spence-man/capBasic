@@ -452,3 +452,258 @@ tar: Exiting with failure status due to previous errors
   INFO [e0648e51] Running /usr/bin/env chmod 644 /usr/share/nginx/html/releases/20170817200334/public/wp-config.php as wimops@127.0.0.1
  DEBUG [e0648e51] Command: /usr/bin/env chmod 644 /usr/share/nginx/html/releases/20170817200334/public/wp-config.php
  DEBUG [e0648e51] 	chmod: cannot access ‘/usr/share/nginx/html/releases/20170817200334/public/wp-config.php’: No such file or directory
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-17 13:06:07 -0700 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [da9f5aa3] Running /usr/bin/env mkdir -p /tmp as wimops@127.0.0.1
+ DEBUG [da9f5aa3] Command: /usr/bin/env mkdir -p /tmp
+  INFO [da9f5aa3] Finished in 0.270 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-chappress-staging-spence.sh 0.0%
+  INFO Uploading /tmp/git-ssh-chappress-staging-spence.sh 100.0%
+  INFO [f3ee3723] Running /usr/bin/env chmod 700 /tmp/git-ssh-chappress-staging-spence.sh as wimops@127.0.0.1
+ DEBUG [f3ee3723] Command: /usr/bin/env chmod 700 /tmp/git-ssh-chappress-staging-spence.sh
+  INFO [f3ee3723] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [7cb4335c] Running /usr/bin/env git ls-remote git@github.com:spence-man/capBasic.git HEAD as wimops@127.0.0.1
+ DEBUG [7cb4335c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env git ls-remote git@github.com:spence-man/capBasic.git HEAD )
+ DEBUG [7cb4335c] 	0ae3ef9a9f3c37d4e1ba0c43b362a899c78db844	HEAD
+  INFO [7cb4335c] Finished in 0.901 seconds with exit status 0 (successful).
+  INFO [394b9c6b] Running /usr/bin/env mkdir -p /usr/share/nginx/html/shared /usr/share/nginx/html/releases as wimops@127.0.0.1
+ DEBUG [394b9c6b] Command: /usr/bin/env mkdir -p /usr/share/nginx/html/shared /usr/share/nginx/html/releases
+  INFO [394b9c6b] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [a916f409] Running /usr/bin/env mkdir -p /usr/share/nginx/html/shared/content/uploads as wimops@127.0.0.1
+ DEBUG [a916f409] Command: /usr/bin/env mkdir -p /usr/share/nginx/html/shared/content/uploads
+  INFO [a916f409] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [ce0667dd] Running /usr/bin/env mkdir -p /usr/share/nginx/html/shared as wimops@127.0.0.1
+ DEBUG [ce0667dd] Command: /usr/bin/env mkdir -p /usr/share/nginx/html/shared
+  INFO [ce0667dd] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [6342d12e] Running /usr/bin/env touch /usr/share/nginx/html/shared/wp-config.php as wimops@127.0.0.1
+ DEBUG [6342d12e] Command: /usr/bin/env touch /usr/share/nginx/html/shared/wp-config.php
+  INFO [6342d12e] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [6dab3c21] Running [ -f /usr/share/nginx/html/shared/wp-config.php ] as wimops@127.0.0.1
+ DEBUG [6dab3c21] Command: [ -f /usr/share/nginx/html/shared/wp-config.php ]
+ DEBUG [6dab3c21] Finished in 0.012 seconds with exit status 0 (successful).
+ DEBUG [1016a1ab] Running [ -f /usr/share/nginx/html/current/REVISION ] as wimops@127.0.0.1
+ DEBUG [1016a1ab] Command: [ -f /usr/share/nginx/html/current/REVISION ]
+ DEBUG [1016a1ab] Finished in 0.013 seconds with exit status 1 (failed).
+ DEBUG [7f26ac85] Running cd /usr/share/nginx/html/repo as wimops@127.0.0.1
+ DEBUG [7f26ac85] Command: cd /usr/share/nginx/html/repo
+ DEBUG [7f26ac85] 	bash: line 0: cd: /usr/share/nginx/html/repo: No such file or directory
+ DEBUG [7f26ac85] Finished in 0.013 seconds with exit status 1 (failed).
+  INFO Skipping check for changed files since the repository path does not exist.
+ DEBUG [4088c346] Running [ -f /usr/share/nginx/html/repo/HEAD ] as wimops@127.0.0.1
+ DEBUG [4088c346] Command: [ -f /usr/share/nginx/html/repo/HEAD ]
+ DEBUG [4088c346] Finished in 0.013 seconds with exit status 1 (failed).
+ DEBUG [1ef029a7] Running if test ! -d /usr/share/nginx/html; then echo "Directory does not exist '/usr/share/nginx/html'" 1>&2; false; fi as wimops@127.0.0.1
+ DEBUG [1ef029a7] Command: if test ! -d /usr/share/nginx/html; then echo "Directory does not exist '/usr/share/nginx/html'" 1>&2; false; fi
+ DEBUG [1ef029a7] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [f01f5a5e] Running /usr/bin/env git clone --mirror git@github.com:spence-man/capBasic.git /usr/share/nginx/html/repo as wimops@127.0.0.1
+ DEBUG [f01f5a5e] Command: cd /usr/share/nginx/html && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env git clone --mirror git@github.com:spence-man/capBasic.git /usr/share/nginx/html/repo )
+ DEBUG [f01f5a5e] 	Cloning into bare repository '/usr/share/nginx/html/repo'...
+ DEBUG [f01f5a5e] 	remote: Counting objects: 1636, done.[K
+ DEBUG [f01f5a5e] 	remote: Compressing objects:   0% (1/1436)   [Kremote: Compressing objects:   1% (15/1436)   [Kremote: Compressing objects:   2% (29/1436)   [Kremote: Compressing objects:   3% (44/1436)   [Kremote: Compressing objects:   4% (58/1436)   [Kremote: Compressing objects:   5% (72/1436)   [Kremote: Compressing objects:   6% (87/1436)   [Kremote: Compressing objects:   7% (101/1436)   [Kremote: Compressing objects:   8% (115/1436)   [Kremote: Compressing objects:   9% (130/1436)   [Kremote: Compressing objects:  10% (144/1436)   [Kremote: Compressing objects:  11% (158/1436)   [Kremote: Compressing objects:  12% (173/1436)   [Kremote: Compressing objects:  13% (187/1436)   [Kremote: Compressing objects:  14% (202/1436)   [Kremote: Compressing objects:  15% (216/1436)   [Kremote: Compressing objects:  16% (230/1436)   [Kremote: Compressing objects:  17% (245/1436)   [Kremote: Compressing objects:  18% (259/1436)   [Kremote: Compressing objects:  19% (273/1436)   [Kremote: Compressing objects:  20% (288/1436)   [Kremote: Compressing objects:  21% (302/1436)   [Kremote: Compressing objects:  22% (316/1436)   [Kremote: Compressing objects:  23% (331/1436)   [Kremote: Compressing objects:  24% (345/1436)   [Kremote: Compressing objects:  25% (359/1436)   [Kremote: Compressing objects:  26% (374/1436)   [Kremote: Compressing objects:  27% (388/1436)   [Kremote: Compressing objects:  28% (403/1436)   [Kremote: Compressing objects:  29% (417/1436)   [Kremote: Compressing objects:  30% (431/1436)   [Kremote: Compressing objects:  31% (446/1436)   [Kremote: Compressing objects:  32% (460/1436)   [Kremote: Compressing objects:  33% (474/1436)   [Kremote: Compressing objects:  34% (489/1436)   [Kremote: Compressing objects:  35% (503/1436)   [Kremote: Compressing objects:  36% (517/1436)   [Kremote: Compressing objects:  37% (532/1436)   [Kremote: Compressing objects:  38% (546/1436)   [Kremote: Compressing objects:  39% (561/1436)   [Kremote: Compressing objects:  40% (575/1436)   [Kremote: Compressing objects:  41% (589/1436)   [Kremote: Compressing objects:  42% (604/1436)   [Kremote: Compressing objects:  43% (618/1436)   [Kremote: Compressing objects:  44% (632/1436)   [Kremote: Compressing objects:  45% (647/1436)   [Kremote: Compressing objects:  46% (661/1436)   [Kremote: Compressing objects:  47% (675/1436)   [Kremote: Compressing objects:  48% (690/1436)   [Kremote: Compressing objects:  49% (704/1436)   [Kremote: Compressing objects:  50% (718/1436)   [Kremote: Compressing objects:  51% (733/1436)   [Kremote: Compressing objects:  52% (747/1436)   [Kremote: Compressing objects:  53% (762/1436)   [Kremote: Compressing objects:  54% (776/1436)   [Kremote: Compressing objects:  55% (790/1436)   [Kremote: Compressing objects:  56% (805/1436)   [Kremote: Compressing objects:  57% (819/1436)   [Kremote: Compressing objects:  58% (833/1436)   [Kremote: Compressing objects:  59% (848/1436)   [Kremote: Compressing objects:  60% (862/1436)   [Kremote: Compressing objects:  61% (876/1436)   [Kremote: Compressing objects:  62% (891/1436)   [K
+ DEBUG [f01f5a5e] 	remote: Compressing objects:  63% (905/1436)   [Kremote: Compressing objects:  64% (920/1436)   [Kremote: Compressing objects:  65% (934/1436)   [Kremote: Compressing objects:  66% (948/1436)   [Kremote: Compressing objects:  67% (963/1436)   [Kremote: Compressing objects:  68% (977/1436)   [Kremote: Compressing objects:  69% (991/1436)   [Kremote: Compressing objects:  70% (1006/1436)   [Kremote: Compressing objects:  71% (1020/1436)   [Kremote: Compressing objects:  72% (1034/1436)   [Kremote: Compressing objects:  73% (1049/1436)   [Kremote: Compressing objects:  74% (1063/1436)   [Kremote: Compressing objects:  75% (1077/1436)   [Kremote: Compressing objects:  76% (1092/1436)   [Kremote: Compressing objects:  77% (1106/1436)   [K
+ DEBUG [f01f5a5e] 	remote: Compressing objects:  78% (1121/1436)   [Kremote: Compressing objects:  79% (1135/1436)   [Kremote: Compressing objects:  80% (1149/1436)   [Kremote: Compressing objects:  81% (1164/1436)   [Kremote: Compressing objects:  82% (1178/1436)   [Kremote: Compressing objects:  83% (1192/1436)   [Kremote: Compressing objects:  84% (1207/1436)   [Kremote: Compressing objects:  85% (1221/1436)   [Kremote: Compressing objects:  86% (1235/1436)   [Kremote: Compressing objects:  87% (1250/1436)   [Kremote: Compressing objects:  88% (1264/1436)   [Kremote: Compressing objects:  89% (1279/1436)   [Kremote: Compressing objects:  90% (1293/1436)   [Kremote: Compressing objects:  91% (1307/1436)   [Kremote: Compressing objects:  92% (1322/1436)   [Kremote: Compressing objects:  93% (1336/1436)   [Kremote: Compressing objects:  94% (1350/1436)   [Kremote: Compressing objects:  95% (1365/1436)   [Kremote: Compressing objects:  96% (1379/1436)   [Kremote: Compressing objects:  97% (1393/1436)   [Kremote: Compressing objects:  98% (1408/1436)   [Kremote: Compressing objects:  99% (1422/1436)   [Kremote: Compressing objects: 100% (1436/1436)   [Kremote: Compressing objects: 100% (1436/1436), done.[K
+ DEBUG [f01f5a5e] 	Receiving objects:   0% (1/1636)   Receiving objects:   1% (17/1636)   
+ DEBUG [f01f5a5e] 	Receiving objects:   2% (33/1636)   
+ DEBUG [f01f5a5e] 	Receiving objects:   3% (50/1636)   Receiving objects:   4% (66/1636)   
+ DEBUG [f01f5a5e] 	Receiving objects:   5% (82/1636)   
+ DEBUG [f01f5a5e] 	Receiving objects:   6% (99/1636)   
+ DEBUG [f01f5a5e] 	Receiving objects:   7% (115/1636), 188.00 KiB | 338.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:   8% (131/1636), 188.00 KiB | 338.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:   9% (148/1636), 188.00 KiB | 338.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  10% (164/1636), 188.00 KiB | 338.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  11% (180/1636), 188.00 KiB | 338.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  12% (197/1636), 188.00 KiB | 338.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  12% (199/1636), 188.00 KiB | 338.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  13% (213/1636), 188.00 KiB | 338.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  14% (230/1636), 572.00 KiB | 529.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  15% (246/1636), 572.00 KiB | 529.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  16% (262/1636), 572.00 KiB | 529.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  17% (279/1636), 572.00 KiB | 529.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  18% (295/1636), 572.00 KiB | 529.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  19% (311/1636), 572.00 KiB | 529.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  20% (328/1636), 572.00 KiB | 529.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  21% (344/1636), 572.00 KiB | 529.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  22% (360/1636), 1.12 MiB | 713.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  23% (377/1636), 1.12 MiB | 713.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  24% (393/1636), 1.12 MiB | 713.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  25% (409/1636), 1.12 MiB | 713.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  26% (426/1636), 1.12 MiB | 713.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  27% (442/1636), 1.12 MiB | 713.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  28% (459/1636), 1.12 MiB | 713.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  29% (475/1636), 1.12 MiB | 713.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  29% (481/1636), 1.12 MiB | 713.00 KiB/s   Receiving objects:  30% (491/1636), 1.12 MiB | 713.00 KiB/s   Receiving objects:  31% (508/1636), 1.12 MiB | 713.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  32% (524/1636), 1.12 MiB | 713.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  33% (540/1636), 1.75 MiB | 845.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  34% (557/1636), 1.75 MiB | 845.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  35% (573/1636), 1.75 MiB | 845.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  36% (589/1636), 1.75 MiB | 845.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  37% (606/1636), 1.75 MiB | 845.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  38% (622/1636), 1.75 MiB | 845.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  39% (639/1636), 1.75 MiB | 845.00 KiB/s   Receiving objects:  40% (655/1636), 1.75 MiB | 845.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  41% (671/1636), 1.75 MiB | 845.00 KiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  42% (688/1636), 2.84 MiB | 1.08 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  43% (704/1636), 2.84 MiB | 1.08 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  44% (720/1636), 2.84 MiB | 1.08 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  45% (737/1636), 2.84 MiB | 1.08 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  46% (753/1636), 2.84 MiB | 1.08 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  47% (769/1636), 2.84 MiB | 1.08 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  48% (786/1636), 2.84 MiB | 1.08 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  49% (802/1636), 2.84 MiB | 1.08 MiB/s   Receiving objects:  50% (818/1636), 2.84 MiB | 1.08 MiB/s   Receiving objects:  51% (835/1636), 2.84 MiB | 1.08 MiB/s   Receiving objects:  52% (851/1636), 2.84 MiB | 1.08 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  52% (866/1636), 2.84 MiB | 1.08 MiB/s   Receiving objects:  53% (868/1636), 2.84 MiB | 1.08 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  54% (884/1636), 2.84 MiB | 1.08 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  55% (900/1636), 2.84 MiB | 1.08 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  56% (917/1636), 2.84 MiB | 1.08 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  57% (933/1636), 2.84 MiB | 1.08 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  58% (949/1636), 2.84 MiB | 1.08 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  59% (966/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  60% (982/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  61% (998/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  62% (1015/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  63% (1031/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  64% (1048/1636), 4.71 MiB | 1.51 MiB/s   Receiving objects:  65% (1064/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  66% (1080/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  67% (1097/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  68% (1113/1636), 4.71 MiB | 1.51 MiB/s   Receiving objects:  69% (1129/1636), 4.71 MiB | 1.51 MiB/s   Receiving objects:  70% (1146/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  71% (1162/1636), 4.71 MiB | 1.51 MiB/s   Receiving objects:  72% (1178/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  73% (1195/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  74% (1211/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  75% (1227/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  76% (1244/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  77% (1260/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  78% (1277/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  79% (1293/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  80% (1309/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  81% (1326/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  82% (1342/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  83% (1358/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  84% (1375/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  85% (1391/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  86% (1407/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  87% (1424/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  88% (1440/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  89% (1457/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  90% (1473/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  91% (1489/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  92% (1506/1636), 4.71 MiB | 1.51 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  93% (1522/1636), 7.10 MiB | 1.96 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  94% (1538/1636), 7.10 MiB | 1.96 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  95% (1555/1636), 7.10 MiB | 1.96 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  96% (1571/1636), 7.10 MiB | 1.96 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  97% (1587/1636), 7.10 MiB | 1.96 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  98% (1604/1636), 7.10 MiB | 1.96 MiB/s   
+ DEBUG [f01f5a5e] 	Receiving objects:  99% (1620/1636), 7.10 MiB | 1.96 MiB/s   
+ DEBUG [f01f5a5e] 	remote: Total 1636 (delta 171), reused 1636 (delta 171), pack-reused 0[K
+ DEBUG [f01f5a5e] 	Receiving objects: 100% (1636/1636), 7.10 MiB | 1.96 MiB/s   Receiving objects: 100% (1636/1636), 8.04 MiB | 1.96 MiB/s, done.
+Resolving deltas:   0% (0/171)   Resolving deltas:   1% (2/171)   Resolving deltas:   3% (6/171)   Resolving deltas:   7% (12/171)   Resolving deltas:  10% (18/171)   Resolving deltas:  14% (24/171)   Resolving deltas:  17% (30/171)   Resolving deltas:  18% (32/171)   Resolving deltas:  19% (33/171)   Resolving deltas:  20% (35/171)   Resolving deltas:  21% (36/171)   Resolving deltas:  22% (38/171)   Resolving deltas:  23% (40/171)   Resolving deltas:  26% (45/171)   Resolving deltas:  27% (47/171)   Resolving deltas:  28% (48/171)   Resolving deltas:  29% (50/171)   Resolving deltas:  30% (53/171)   Resolving deltas:  32% (55/171)   Resolving deltas:  33% (57/171)   Resolving deltas:  34% (59/171)   Resolving deltas:  36% (62/171)   Resolving deltas:  37% (64/171)   Resolving deltas:  39% (68/171)   Resolving deltas:  40% (69/171)   Resolving deltas:  42% (72/171)   Resolving deltas:  43% (74/171)   Resolving deltas:  44% (76/171)   Resolving deltas:  45% (77/171)   Resolving deltas:  46% (79/171)   Resolving deltas:  47% (81/171)   Resolving deltas:  48% (83/171)   Resolving deltas:  49% (84/171)   Resolving deltas:  50% (86/171)   Resolving deltas:  51% (88/171)   Resolving deltas:  52% (90/171)   Resolving deltas:  53% (92/171)   Resolving deltas:  54% (94/171)   Resolving deltas:  55% (95/171)   Resolving deltas:  56% (96/171)   Resolving deltas:  57% (98/171)   Resolving deltas:  75% (129/171)   Resolving deltas:  76% (130/171)   Resolving deltas:  78% (134/171)   Resolving deltas:  79% (136/171)   Resolving deltas:  80% (137/171)   Resolving deltas:  81% (139/171)   Resolving deltas:  83% (142/171)   Resolving deltas:  84% (144/171)   Resolving deltas:  85% (147/171)   Resolving deltas:  86% (148/171)   Resolving deltas:  87% (149/171)   Resolving deltas:  88% (152/171)   Resolving deltas:  89% (153/171)   Resolving deltas:  90% (154/171)   Resolving deltas:  91% (156/171)   Resolving deltas:  92% (159/171)   Resolving deltas:  93% (160/171)   Resolving deltas:  97% (167/171)   Resolving deltas: 100% (171/171)   Resolving deltas: 100% (171/171), done.
+  INFO [f01f5a5e] Finished in 4.766 seconds with exit status 0 (successful).
+ DEBUG [e64b61a3] Running if test ! -d /usr/share/nginx/html/repo; then echo "Directory does not exist '/usr/share/nginx/html/repo'" 1>&2; false; fi as wimops@127.0.0.1
+ DEBUG [e64b61a3] Command: if test ! -d /usr/share/nginx/html/repo; then echo "Directory does not exist '/usr/share/nginx/html/repo'" 1>&2; false; fi
+ DEBUG [e64b61a3] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [644a17a5] Running /usr/bin/env git remote set-url origin git@github.com:spence-man/capBasic.git as wimops@127.0.0.1
+ DEBUG [644a17a5] Command: cd /usr/share/nginx/html/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env git remote set-url origin git@github.com:spence-man/capBasic.git )
+  INFO [644a17a5] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [3170c240] Running /usr/bin/env git remote update --prune as wimops@127.0.0.1
+ DEBUG [3170c240] Command: cd /usr/share/nginx/html/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [3170c240] 	Fetching origin
+  INFO [3170c240] Finished in 0.695 seconds with exit status 0 (successful).
+ DEBUG [1015a7ba] Running if test ! -d /usr/share/nginx/html/repo; then echo "Directory does not exist '/usr/share/nginx/html/repo'" 1>&2; false; fi as wimops@127.0.0.1
+ DEBUG [1015a7ba] Command: if test ! -d /usr/share/nginx/html/repo; then echo "Directory does not exist '/usr/share/nginx/html/repo'" 1>&2; false; fi
+ DEBUG [1015a7ba] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [7d2f8b0e] Running /usr/bin/env mkdir -p /usr/share/nginx/html/releases/20170817200608 as wimops@127.0.0.1
+ DEBUG [7d2f8b0e] Command: cd /usr/share/nginx/html/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env mkdir -p /usr/share/nginx/html/releases/20170817200608 )
+  INFO [7d2f8b0e] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [ae1efea6] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /usr/share/nginx/html/releases/20170817200608 as wimops@127.0.0.1
+ DEBUG [ae1efea6] Command: cd /usr/share/nginx/html/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /usr/share/nginx/html/releases/20170817200608 )
+  INFO [ae1efea6] Finished in 0.184 seconds with exit status 0 (successful).
+ DEBUG [9fcfb900] Running if test ! -d /usr/share/nginx/html/repo; then echo "Directory does not exist '/usr/share/nginx/html/repo'" 1>&2; false; fi as wimops@127.0.0.1
+ DEBUG [9fcfb900] Command: if test ! -d /usr/share/nginx/html/repo; then echo "Directory does not exist '/usr/share/nginx/html/repo'" 1>&2; false; fi
+ DEBUG [9fcfb900] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [d13dbb8e] Running /usr/bin/env git rev-list --max-count=1 master as wimops@127.0.0.1
+ DEBUG [d13dbb8e] Command: cd /usr/share/nginx/html/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [d13dbb8e] 	0ae3ef9a9f3c37d4e1ba0c43b362a899c78db844
+ DEBUG [d13dbb8e] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [c09461cd] Running if test ! -d /usr/share/nginx/html/releases/20170817200608; then echo "Directory does not exist '/usr/share/nginx/html/releases/20170817200608'" 1>&2; false; fi as wimops@127.0.0.1
+ DEBUG [c09461cd] Command: if test ! -d /usr/share/nginx/html/releases/20170817200608; then echo "Directory does not exist '/usr/share/nginx/html/releases/20170817200608'" 1>&2; false; fi
+ DEBUG [c09461cd] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [40013a69] Running /usr/bin/env echo "0ae3ef9a9f3c37d4e1ba0c43b362a899c78db844" >> REVISION as wimops@127.0.0.1
+ DEBUG [40013a69] Command: cd /usr/share/nginx/html/releases/20170817200608 && /usr/bin/env echo "0ae3ef9a9f3c37d4e1ba0c43b362a899c78db844" >> REVISION
+  INFO [40013a69] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [875b5aea] Running /usr/bin/env mkdir -p /usr/share/nginx/html/releases/20170817200608 as wimops@127.0.0.1
+ DEBUG [875b5aea] Command: /usr/bin/env mkdir -p /usr/share/nginx/html/releases/20170817200608
+  INFO [875b5aea] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [ea903cdb] Running [ -L /usr/share/nginx/html/releases/20170817200608/wp-config.php ] as wimops@127.0.0.1
+ DEBUG [ea903cdb] Command: [ -L /usr/share/nginx/html/releases/20170817200608/wp-config.php ]
+ DEBUG [ea903cdb] Finished in 0.013 seconds with exit status 1 (failed).
+ DEBUG [9ddf48b5] Running [ -f /usr/share/nginx/html/releases/20170817200608/wp-config.php ] as wimops@127.0.0.1
+ DEBUG [9ddf48b5] Command: [ -f /usr/share/nginx/html/releases/20170817200608/wp-config.php ]
+ DEBUG [9ddf48b5] Finished in 0.012 seconds with exit status 1 (failed).
+  INFO [5e125baa] Running /usr/bin/env ln -s /usr/share/nginx/html/shared/wp-config.php /usr/share/nginx/html/releases/20170817200608/wp-config.php as wimops@127.0.0.1
+ DEBUG [5e125baa] Command: /usr/bin/env ln -s /usr/share/nginx/html/shared/wp-config.php /usr/share/nginx/html/releases/20170817200608/wp-config.php
+  INFO [5e125baa] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [3647409d] Running /usr/bin/env mkdir -p /usr/share/nginx/html/releases/20170817200608/content as wimops@127.0.0.1
+ DEBUG [3647409d] Command: /usr/bin/env mkdir -p /usr/share/nginx/html/releases/20170817200608/content
+  INFO [3647409d] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [3eb00f0d] Running [ -L /usr/share/nginx/html/releases/20170817200608/content/uploads ] as wimops@127.0.0.1
+ DEBUG [3eb00f0d] Command: [ -L /usr/share/nginx/html/releases/20170817200608/content/uploads ]
+ DEBUG [3eb00f0d] Finished in 0.014 seconds with exit status 1 (failed).
+ DEBUG [3ce0c07a] Running [ -d /usr/share/nginx/html/releases/20170817200608/content/uploads ] as wimops@127.0.0.1
+ DEBUG [3ce0c07a] Command: [ -d /usr/share/nginx/html/releases/20170817200608/content/uploads ]
+ DEBUG [3ce0c07a] Finished in 0.015 seconds with exit status 1 (failed).
+  INFO [5d71a9f1] Running /usr/bin/env ln -s /usr/share/nginx/html/shared/content/uploads /usr/share/nginx/html/releases/20170817200608/content/uploads as wimops@127.0.0.1
+ DEBUG [5d71a9f1] Command: /usr/bin/env ln -s /usr/share/nginx/html/shared/content/uploads /usr/share/nginx/html/releases/20170817200608/content/uploads
+  INFO [5d71a9f1] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [c446f194] Running /usr/bin/env ln -s /usr/share/nginx/html/releases/20170817200608 /usr/share/nginx/html/releases/current as wimops@127.0.0.1
+ DEBUG [c446f194] Command: /usr/bin/env ln -s /usr/share/nginx/html/releases/20170817200608 /usr/share/nginx/html/releases/current
+  INFO [c446f194] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [cf202b6e] Running /usr/bin/env mv /usr/share/nginx/html/releases/current /usr/share/nginx/html as wimops@127.0.0.1
+ DEBUG [cf202b6e] Command: /usr/bin/env mv /usr/share/nginx/html/releases/current /usr/share/nginx/html
+  INFO [cf202b6e] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [3899d278] Running /usr/bin/env ls -x /usr/share/nginx/html/releases as wimops@127.0.0.1
+ DEBUG [3899d278] Command: /usr/bin/env ls -x /usr/share/nginx/html/releases
+ DEBUG [3899d278] 	20170817200608
+ DEBUG [3899d278] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [5fa78df6] Running if test ! -d /usr/share/nginx/html/releases; then echo "Directory does not exist '/usr/share/nginx/html/releases'" 1>&2; false; fi as wimops@127.0.0.1
+ DEBUG [5fa78df6] Command: if test ! -d /usr/share/nginx/html/releases; then echo "Directory does not exist '/usr/share/nginx/html/releases'" 1>&2; false; fi
+ DEBUG [5fa78df6] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [27d2396c] Running /usr/bin/env echo "Branch master (at 0ae3ef9a9f3c37d4e1ba0c43b362a899c78db844) deployed as release 20170817200608 by spence" >> /usr/share/nginx/html/revisions.log as wimops@127.0.0.1
+ DEBUG [27d2396c] Command: cd /usr/share/nginx/html/releases && /usr/bin/env echo "Branch master (at 0ae3ef9a9f3c37d4e1ba0c43b362a899c78db844) deployed as release 20170817200608 by spence" >> /usr/share/nginx/html/revisions.log
+  INFO [27d2396c] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [5e9755ea] Running /usr/bin/env chmod 644 /usr/share/nginx/html/releases/20170817200608/public/wp-config.php as wimops@127.0.0.1
+ DEBUG [5e9755ea] Command: /usr/bin/env chmod 644 /usr/share/nginx/html/releases/20170817200608/public/wp-config.php
+  INFO [5e9755ea] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [57c5d4ff] Running /usr/bin/env sudo service nginx restart as wimops@127.0.0.1
+ DEBUG [57c5d4ff] Command: /usr/bin/env sudo service nginx restart
+ DEBUG [57c5d4ff] 	[sudo] password for wimops: 
+ DEBUG [57c5d4ff] 	
+ DEBUG [57c5d4ff] 	Redirecting to /bin/systemctl restart  nginx.service
+  INFO [57c5d4ff] Finished in 2.646 seconds with exit status 0 (successful).
+  INFO [fef04dfd] Running /usr/bin/env sudo service php-fpm restart as wimops@127.0.0.1
+ DEBUG [fef04dfd] Command: /usr/bin/env sudo service php-fpm restart
+ DEBUG [fef04dfd] 	[sudo] password for wimops: 
+ DEBUG [fef04dfd] 	
+ DEBUG [fef04dfd] 	Redirecting to /bin/systemctl restart  php-fpm.service
+  INFO [fef04dfd] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [ac6f9e5a] Running cd '/usr/share/nginx/html/releases/20170817200608/public'; wp core install --url=http://localhost:80 --title=chap-press --admin_user=chappress --admin_password=password --admin_email=chappress@gmail.com as wimops@127.0.0.1
+ DEBUG [ac6f9e5a] Command: cd '/usr/share/nginx/html/releases/20170817200608/public'; wp core install --url=http://localhost:80 --title=chap-press --admin_user=chappress --admin_password=password --admin_email=chappress@gmail.com
+ DEBUG [ac6f9e5a] 	[32;1mSuccess:[0m WordPress installed successfully.
+  INFO [ac6f9e5a] Finished in 0.520 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-17 13:16:37 -0700 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [c7361d26] Running /usr/bin/env mkdir -p /tmp as wimops@127.0.0.1
+ DEBUG [c7361d26] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c7361d26] Finished in 0.382 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-chappress-staging-spence.sh 0.0%
+  INFO Uploading /tmp/git-ssh-chappress-staging-spence.sh 100.0%
+  INFO [bfe06076] Running /usr/bin/env chmod 700 /tmp/git-ssh-chappress-staging-spence.sh as wimops@127.0.0.1
+ DEBUG [bfe06076] Command: /usr/bin/env chmod 700 /tmp/git-ssh-chappress-staging-spence.sh
+  INFO [bfe06076] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [ce319fdc] Running /usr/bin/env git ls-remote git@github.com:spence-man/capBasic.git HEAD as wimops@127.0.0.1
+ DEBUG [ce319fdc] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chappress-staging-spence.sh" ; /usr/bin/env git ls-remote git@github.com:spence-man/capBasic.git HEAD )
+ DEBUG [ce319fdc] 	0ae3ef9a9f3c37d4e1ba0c43b362a899c78db844	HEAD
+  INFO [ce319fdc] Finished in 0.769 seconds with exit status 0 (successful).
+  INFO [915cb6be] Running /usr/bin/env mkdir -p /usr/share/nginx/html/shared /usr/share/nginx/html/releases as wimops@127.0.0.1
+ DEBUG [915cb6be] Command: /usr/bin/env mkdir -p /usr/share/nginx/html/shared /usr/share/nginx/html/releases
+ DEBUG [915cb6be] 	mkdir: cannot create directory ‘/usr/share/nginx/html/shared’: Permission denied
+mkdir: cannot create directory ‘/usr/share/nginx/html/releases’: Permission denied

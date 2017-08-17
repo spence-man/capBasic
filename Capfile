@@ -24,7 +24,7 @@ require './lib/helpers.rb'
 require './lib/capistrano/submodule_strategy'
 
 # Enter Sudo password for restarting nginx/php
-require 'sshkit/sudo'
+#require 'sshkit/sudo'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }

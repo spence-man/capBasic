@@ -5,4 +5,4 @@ group :development do
 end
 
 gem 'colorize'
-gem 'sshkit-sudo'
+# gem 'sshkit-sudo'
